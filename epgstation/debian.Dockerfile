@@ -4,11 +4,6 @@ ENV DEV="make gcc git g++ automake curl wget autoconf build-essential libass-dev
 ENV FFMPEG_VERSION=7.0
 
 RUN mkdir -p /app/config /app/data /app/thumbnail /app/logs /app/recorded && \
-    curl https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/enc.js.template -o /app/config/enc.js && \
-    curl https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/config.yml.template -o /app/config/config.yml && \
-    curl https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/operatorLogConfig.sample.yml -o /app/config/operatorLogConfig.yml && \
-    curl https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/epgUpdaterLogConfig.sample.yml -o /app/config/epgUpdaterLogConfig.yml && \
-    curl https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/serviceLogConfig.sample.yml -o /app/config/serviceLogConfig.yml && \
     apt-get update && \
     apt-get -y install $DEV && \
     apt-get -y install yasm libx264-dev libmp3lame-dev libopus-dev libvpx-dev && \
