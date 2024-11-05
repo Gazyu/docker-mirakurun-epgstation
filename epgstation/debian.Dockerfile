@@ -6,11 +6,11 @@ ENV FFMPEG_VERSION=7.0
 RUN mkdir -p /app/config /app/data /app/thumbnail /app/logs /app/recorded && \
     apt-get update && \
     apt-get -y install $DEV && \
-    curl -o /app/config/enc.js https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/enc.js.template  && \
-    curl -o /app/config/config.yml https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/config.yml.template  && \
-    curl -o /app/config/operatorLogConfig.yml https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/operatorLogConfig.sample.yml  && \
-    curl -o /app/config/epgUpdaterLogConfig.yml https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/epgUpdaterLogConfig.sample.yml  && \
-    curl -o /app/config/serviceLogConfig.yml https://github.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/serviceLogConfig.sample.yml  && \
+    curl -o /app/config/enc.js https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/refs/heads/v2/epgstation/config/enc.js.template  && \
+    curl -o /app/config/config.yml https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/config.yml.template  && \
+    curl -o /app/config/operatorLogConfig.yml https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/operatorLogConfig.sample.yml  && \
+    curl -o /app/config/epgUpdaterLogConfig.yml https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/epgUpdaterLogConfig.sample.yml  && \
+    curl -o /app/config/serviceLogConfig.yml https://raw.githubusercontent.com/l3tnun/docker-mirakurun-epgstation/raw/refs/heads/v2/epgstation/config/serviceLogConfig.sample.yml  && \
     apt-get -y install yasm libx264-dev libmp3lame-dev libopus-dev libvpx-dev && \
     apt-get -y install libx265-dev libnuma-dev && \
     apt-get -y install libasound2 libass9 libvdpau1 libva-x11-2 libva-drm2 libxcb-shm0 libxcb-xfixes0 libxcb-shape0 libvorbisenc2 libtheora0 libaribb24-dev && \
